@@ -17,3 +17,4 @@ $headers = "From : noreplay.clinique.angus@outlook.com";
 if($email!=null) {
     mail($to,$subject,$sendMail,$headers);
 }
+?>
