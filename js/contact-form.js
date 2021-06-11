@@ -72,7 +72,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             data: dataString,
-            url: 'php/contactForm.php',                                                                           /*php/contactForm.php*/
+            url: '../php/contactForm.php',                                                                           /*php/contactForm.php*/
             cache: false,
             success: function (d) {
                 alert(d);
@@ -81,7 +81,10 @@ $(document).ready(function () {
                     $('.loading').fadeIn('slow').html('<font color="#48af4b">Mail sent Successfully.</font>').delay(3000).fadeOut('slow');
                 else
                     $('.loading').fadeIn('slow').html('<font color="#ff5607">Mail not sent.</font>').delay(3000).fadeOut('slow');
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(textStatus+errorThrown+XMLHttpRequest);
+             }
         });
         return false;
     });
