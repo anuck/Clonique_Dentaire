@@ -72,7 +72,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             data: dataString,
-            url: '../php/contactForm.php',                                                                           /*php/contactForm.php*/
+            url: 'php/contactForm.php',                                                                           /*php/contactForm.php*/
             cache: false,
             success: function (d) {
                 alert(d);
