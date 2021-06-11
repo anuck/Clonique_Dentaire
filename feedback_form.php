@@ -14,7 +14,7 @@ $email_address  = filter_email_header($email_address);
 
 #Send email
 $headers = "From: $email_addressn";
-$sent = mail('you@domain.com', 'Feedback Form Submission', $feedback, $headers);
+$sent = mail('sbkannath1996@gmail.com', 'Feedback Form Submission', $feedback, $headers);
 
 #Thank user or notify them of a problem
 if ($sent) {
