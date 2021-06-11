@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     
 
-    $(".contact-form").submit(function (e) {
+    $(".form").submit(function (e) {
         e.preventDefault();
         var name = $(".name");
         var email = $(".email");
@@ -72,7 +72,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             data: dataString,
-            url: 'php/contactForm.php',                                                                           /*php/contactForm.php*/
+            url: $(form).attr('action'),                                                                           /*php/contactForm.php*/
             cache: false,
             success: function (d) {
                 alert(d);
