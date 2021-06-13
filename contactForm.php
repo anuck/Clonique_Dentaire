@@ -20,11 +20,11 @@ $headers = "From : " . $email;
 
 if ($email != null) {
     mail($to, $subject, $sendMail);
-    http_response_code(200);
-    print json_encode(['error' => 0, "msg" => "Thankyou! Your message has been sent."]);
+   http_response_code(200);
+    echo "Thankyou! Your message has been sent";
 } else {
     http_response_code(500);
-    print json_encode(['error' => 1, 'msg' => 'There was a problem in your submission, please try again']);
+    echo "There was a problem in your submission, please try again";
 }
 
 ?>
